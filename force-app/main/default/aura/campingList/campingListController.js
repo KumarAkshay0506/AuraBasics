@@ -30,5 +30,10 @@
             console.log("Create Camping Item: " + JSON.stringify(newItem));  //todo remove after testing
             helper.createItem(component, newItem);
         }
-    }
+    },
+    handleAddItem : function(component, event, helper) {
+       var item = event.getParam("item");
+       helper.addItem(component, item);
+
+    } 
 })
