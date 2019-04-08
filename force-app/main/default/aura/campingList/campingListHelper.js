@@ -1,5 +1,5 @@
 ({
-    addItem : function(component, expense, callback) {
+    addItem : function(component, item, callback) {
         var action = component.get("c.saveItem");
         action.setParams({
             "item": item

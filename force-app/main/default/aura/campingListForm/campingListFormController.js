@@ -1,5 +1,5 @@
 ({
-    
+
     clickCreateItem: function(component, event, helper) {    
     //if(helper.validateItemForm(component)){
         // Create the new item
@@ -7,6 +7,7 @@
         helper.createItem(component, newItem);
     //}
         
-        }
+    }
+
 
 })

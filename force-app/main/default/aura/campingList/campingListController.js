@@ -32,8 +32,7 @@
         }
     },
     handleAddItem : function(component, event, helper) {
-       var item = event.getParam("item");
-       helper.addItem(component, item);
-
+       var newItem = event.getParam("item");
+       helper.addItem(component, newItem);
     } 
 })
