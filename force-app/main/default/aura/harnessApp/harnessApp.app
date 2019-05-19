@@ -1,5 +1,3 @@
 <aura:application>
-    <c:helloWorld/>
-    <c:helloPlayground/>
-    <c:helloMessageInteractive/>
+    <c:myFirstComponent />
 </aura:application>
