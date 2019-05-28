@@ -1,26 +1,26 @@
 <aura:component implements="flexipage:availableForRecordHome, force:hasRecordId">
-    <aura:attribute name="simpleRecord" type="Object" description="A simplified view of the object to be displayed"/>
-    <aura:attribute name="accountRecord" type="Object" description="Displays the record and records Name, Description, Phone, and Industry"/>
+    <aura:attribute name="accountRecord" type="Object" description="A simplified view of the object to be displayed"/>
+    <aura:attribute name="theRecord" type="Object" description="Displays the record and records Name, Description, Phone, and Industry"/>
     <aura:attribute name="recordError" type="String" description="Holds error messages bound to force:recordData"/>
 
     <force:recordData aura:id="record"
-                      layoutType="FULL"
-                      recordId="{!v.recordId}"
+                      recordId="{!v.recordId}" 
+                      fields="Id, Name, Industry, Description, Phone"
                       targetError="{!v.recordError}"
-                      targetRecord="{!v.accountRecord}"
-                      targetFields="{!v.simpleRecord}"
+                      targetRecord="{!v.theRecord}"
+                      targetFields="{!v.accountRecord}"
                       mode="VIEW"/>
     
-    <lightning:card iconName="standard:account" title="{!v.simpleRecord.Name}" >
+    <lightning:card iconName="standard:account" title="{!v.accountRecord.Name}" >
         <div class="slds-p-horizontal--small">
             <p class="slds-text-heading--small">
-                <lightning:formattedText title="Industry" value="{!v.simpleRecord.Industry}" />
+                <lightning:formattedText title="Industry" value="{!v.accountRecord.Industry}" />
             </p>
             <p class="slds-text-heading--small">
-                <lightning:formattedText title="Description" value="{!v.simpleRecord.Description}" />
+                <lightning:formattedText title="Description" value="{!v.accountRecord.Description}" />
             </p>
             <p class="slds-p-heading--small">
-                <lightning:formattedPhone title="Phone" value="{!v.simpleRecord.Phone}"></lightning:formattedPhone>
+                <lightning:formattedPhone title="Phone" value="{!v.accountRecord.Phone}"></lightning:formattedPhone>
             </p>
         </div>
     </lightning:card>
